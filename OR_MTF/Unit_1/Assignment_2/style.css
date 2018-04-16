@@ -1,0 +1,17 @@
+/*Removes any prexisting padding or marginal space from the html and body elements.*/
+
+html body {
+	margin: 0;
+	padding: 0;
+	/*Remove this background-color! It is here to make sure that the css and html are linked.*/
+	background-color: #5abaf3;
+}
+
+/*Remove this h1 Rule! */
+
+h1 {
+	text-align: center;
+	padding-top: 50px;
+	color: white;
+	font-size: 100px;
+}
