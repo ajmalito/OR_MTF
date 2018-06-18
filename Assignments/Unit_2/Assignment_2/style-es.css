@@ -1,0 +1,37 @@
+/*Elimina cualquier relleno preexistente o espacio marginal de los elementos html y del body.*/
+
+html body {
+	margin: 0;
+	padding: 0;
+	/*Quita este color de fondo! Está aquí para asegurarse de que el css y el html están enlazados.*/
+	background-color: #5abaf3;
+	text-align: center;
+}
+
+/* Elimine esta regla h1! */
+
+h1 {
+	text-align: center;
+	padding-top: 50px;
+	color: white;
+	font-size: 100px;
+}
+
+#random-btn {
+	text-align: center;
+	padding: 10px;
+	font-size: 24px;
+	border-radius: 4px;
+	border: white 1px solid;
+	width: 200px;
+	margin: 0 auto;
+	color: white;
+	transition: .5s;
+
+}
+
+#random-btn:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.25);
+
+}

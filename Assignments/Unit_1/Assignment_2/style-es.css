@@ -1,0 +1,17 @@
+/*Elimina cualquier relleno preexistente o espacio marginal de los elementos html y del body.*/
+
+html body {
+	margin: 0;
+	padding: 0;
+	/*Quita este color de fondo! Está aquí para asegurarse de que el css y el html están enlazados.*/
+	background-color: #5abaf3;
+}
+
+/* Elimine esta regla h1! */
+
+h1 {
+	text-align: center;
+	padding-top: 50px;
+	color: white;
+	font-size: 100px;
+}

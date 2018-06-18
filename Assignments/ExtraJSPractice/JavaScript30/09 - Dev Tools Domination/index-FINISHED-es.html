@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('Hola');
+
+    // Interpolado
+    console.log('Hola soy un %s string!', '💩');
+
+    // Con estilo
+    // console.log('%c Soy un gran texto', 'font-size:50px; background:red; text-shadow: 10px 10px 0 blue')
+
+    // Advertencia!
+    console.warn('OH NOOO');
+
+    // Error :|
+    console.error('Joder!');
+
+    // Información
+    console.info('Los cocodrilos comen 3-4 personas al año');
+
+    // Pruebas
+    const p = document.querySelector('p');
+
+    console.assert(p.classList.contains('ouch'), 'Esto esta mal!');
+
+    // Limpieza
+    console.clear();
+
+    // Visualización de elementos DOM
+    console.log(p);
+    console.dir(p);
+
+    console.clear();
+
+    // En grupo
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`Este es ${dog.name}`);
+      console.log(`${dog.name} es ${dog.age} años`);
+      console.log(`${dog.name} es ${dog.age * 7} años de edad del perro`);
+      console.groupEnd(`${dog.name}`);
+    });
+
+    // Conteo
+
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+
+    // plazo
+    console.time('obtención de datos');
+    fetch('https://api.github.com/users/wesbos')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('obtención de datos');
+        console.log(data);
+      });
+
+    console.table(dogs);
+
+  </script>
+</body>
+</html>
